@@ -34,7 +34,14 @@ app.get("/", (req, res)=>{
 	res.send("Congratulations! You did it.");
 });
 
-
+// Global error handler
+app.use((err, req, res, next) => {
+  console.error("🚨 Server Error:", err);
+  res.status(500).json({
+    message: "Internal Server Error",
+    error: err.message // remove in production
+  });
+});
 
 
 // Export App

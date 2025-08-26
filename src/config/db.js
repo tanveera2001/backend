@@ -9,12 +9,9 @@ const connectDatabase = async (options = {}) => {
       ...options
     });
     console.log("✅ Successfully connected to the MongoDB database.");
-
-    mongoose.connection.on("error", (error) => {
-      console.error("⚠️ Runtime MongoDB connection error:", error.toString());
-    });
   } catch (error) {
-    console.error("❌ Failed to connect to the MongoDB database:", error.toString());
+    console.error("❌ Failed to connect to the MongoDB database:", error);
+    throw error;
   }
 };
 
