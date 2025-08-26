@@ -1,6 +1,3 @@
-// Load environment variables from .env
-require('dotenv').config();
-
 const mongoose = require("mongoose");
 
 const connectDatabase = async (options = {}) => {
@@ -8,6 +5,7 @@ const connectDatabase = async (options = {}) => {
     await mongoose.connect(process.env.MONGODB_ATLAS_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
+      serverSelectionTimeoutMS: 20000, // 20 seconds
       ...options
     });
     console.log("✅ Successfully connected to the MongoDB database.");
