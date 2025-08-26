@@ -1,12 +1,7 @@
 const cors = require("cors");
 
-const allowedOrigins = [
-  "http://localhost:5173",  // local frontend
-  "https://tanveer-portfolio-client.vercel.app"  // deployed frontend
-];
-
 const corsOptions = {
-  origin: allowedOrigins,
+  origin: "https://frontend-theta-eight-12.vercel.app/", // your Vercel frontend URL
   credentials: true,
 };
 
