@@ -1,8 +1,11 @@
+// Load environment variables from .env
+require('dotenv').config();
+
 const mongoose = require("mongoose");
 
 const connectDatabase = async (options = {}) => {
   try {
-    await mongoose.connect(process.env.MONGODB_URL, {
+    await mongoose.connect(process.env.MONGODB_ATLAS_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       ...options
