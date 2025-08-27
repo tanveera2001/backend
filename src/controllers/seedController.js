@@ -1,6 +1,7 @@
 
 const data = require("../data");
 const Project = require("../models/projectModel");
+const ToolTechnology = require("../models/toolTechnologyModel");
 
 const seedProject = async(req, res, next) => {
     try {
@@ -17,4 +18,18 @@ const seedProject = async(req, res, next) => {
     }
 };
 
-module.exports = {seedProject};
+
+const seedToolsTechnologies = async (req, res, next) => {
+    try {
+        await ToolTechnology.deleteMany({}); // This line delete existing toolsTechnologies.
+
+        const tools = await ToolTechnology.insertMany(data.toolsTechnologies);
+
+        return res.status(201).json(tools);
+    } catch (error) {
+        next(error);
+    }
+
+}
+
+module.exports = {seedProject, seedToolsTechnologies};

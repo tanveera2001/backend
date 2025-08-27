@@ -1,11 +1,13 @@
 
 const express = require("express");
 const morgan = require("morgan");
+const path = require("path");
 
 
 const customCors = require("./config/cors");
 const seedRouter = require("./routers/seedRouter");
 const projectRouter = require("./routers/projectRouter");
+const toolsTechnologiesRouter = require("./routers/toolsTechnologiesRouter");
 
 
 
@@ -23,12 +25,14 @@ app.use(morgan("dev"));
 
 
 // 📁 Public Static Files
+app.use(express.static(path.join(__dirname, "..", "public")));
 
 
 
 // API Routes
 app.use("/api/seed", seedRouter);
 app.use("/api/projects", projectRouter);
+app.use("/api/tools-technologies", toolsTechnologiesRouter);
 
 app.get("/", (req, res)=>{
 	res.send("Congratulations! You did it.");
