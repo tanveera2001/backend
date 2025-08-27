@@ -1,4 +1,5 @@
 require('dotenv').config(); // We must need this because we are using .env file's variable
+const cors = require("cors");
 
 const FRONTEND_URL = process.env.FRONTEND_URL;
 
