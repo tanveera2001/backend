@@ -95,6 +95,21 @@ const data = {
       image: "images/tools-technologies/1753468137264-vercel.png",
     },
   ],
+  workExperience: [
+    {
+      startDate: "2021-11-08",
+      endDate: "Current",
+      role: "Full Stack Software Developer",
+      company: "AlgoSolver LLC",
+      location: "(Remote) 28-07 Jackson Ave, Long Island City, NY",
+      image: "images/work-experience/1753468137233-work-experience.jpg",
+      points: [
+        "I do not have formal work experience yet, but I have been learning web development for the past 3 years.",
+        "Developed full-stack applications using the MERN (MongoDB, Express, React, Node.js) stack.",
+        "Implemented authentication and authorization features with JWT and session-based systems.",
+      ],
+    },
+  ],
   education: [
     {
       startDate: "2023",
