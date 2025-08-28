@@ -8,6 +8,7 @@ const customCors = require("./config/cors");
 const seedRouter = require("./routers/seedRouter");
 const projectRouter = require("./routers/projectRouter");
 const toolsTechnologiesRouter = require("./routers/toolsTechnologiesRouter");
+const educationRouter = require("./routers/educationRouter");
 
 
 
@@ -33,6 +34,7 @@ app.use(express.static(path.join(__dirname, "..", "public")));
 app.use("/api/seed", seedRouter);
 app.use("/api/projects", projectRouter);
 app.use("/api/tools-technologies", toolsTechnologiesRouter);
+app.use("/api/education", educationRouter)
 
 app.get("/", (req, res)=>{
 	res.send("Congratulations! You did it.");

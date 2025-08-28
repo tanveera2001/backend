@@ -1,5 +1,6 @@
 
 const data = require("../data");
+const Education = require("../models/educationModel");
 const Project = require("../models/projectModel");
 const ToolTechnology = require("../models/toolTechnologyModel");
 
@@ -32,4 +33,18 @@ const seedToolsTechnologies = async (req, res, next) => {
 
 }
 
-module.exports = {seedProject, seedToolsTechnologies};
+
+const seedEducation = async (req, res, next) => {
+    try {
+        await Education.deleteMany({});
+
+        const education = await Education.insertMany(data.education);
+        return res.status(201).json(education);
+        
+    } catch (error) {
+        next(error);    
+    }
+
+};
+
+module.exports = {seedProject, seedToolsTechnologies, seedEducation};

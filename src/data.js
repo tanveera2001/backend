@@ -95,6 +95,32 @@ const data = {
       image: "images/tools-technologies/1753468137264-vercel.png",
     },
   ],
+  education: [
+    {
+      startDate: "2023",
+      endDate: "Current",
+      degree: "Bachelors of Science in Computer Science and Engineering",
+      institution: "North South University",
+      location: "Bashundhara, Dhaka, Bangladesh",
+      image: "images/education/1753468137201-nsu.png"
+    },
+    {
+      startDate: "July 2019",
+      endDate: "June 2022",
+      degree: "Higher Secondary Certificate (HSC)",
+      institution: "Dhaka College",
+      location: "New Market, Dhaka, Bangladesh",
+      image: "images/education/1753468137202-dhaka-college.png"
+    },
+    {
+      startDate: "Jan 2010",
+      endDate: "June 2019",
+      degree: "Secondary School Certificate (SSC)",
+      institution: "Ideal School and College",
+      location: "Motijheel, Dhaka, Bangladesh",
+      image: "images/education/1753468137203-isc.jpg"
+    }
+  ],
 
 };
 
